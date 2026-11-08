@@ -8,16 +8,20 @@
 
 #define TAG "InfraredSignal"
 
+// Common keys
 #define INFRARED_SIGNAL_NAME_KEY "name"
 #define INFRARED_SIGNAL_TYPE_KEY "type"
 
+// Type key values
 #define INFRARED_SIGNAL_TYPE_RAW    "raw"
 #define INFRARED_SIGNAL_TYPE_PARSED "parsed"
 
+// Raw signal keys
 #define INFRARED_SIGNAL_DATA_KEY       "data"
 #define INFRARED_SIGNAL_FREQUENCY_KEY  "frequency"
 #define INFRARED_SIGNAL_DUTY_CYCLE_KEY "duty_cycle"
 
+// Parsed signal keys
 #define INFRARED_SIGNAL_PROTOCOL_KEY "protocol"
 #define INFRARED_SIGNAL_ADDRESS_KEY  "address"
 #define INFRARED_SIGNAL_COMMAND_KEY  "command"
@@ -284,7 +288,7 @@ bool infrared_signal_read(InfraredSignal* signal, FlipperFormat* ff, FuriString*
         if(!infrared_signal_read_name(ff, name)) break;
         if(!infrared_signal_read_body(signal, ff)) break;
 
-        success = true;
+        success = true; //-V779
     } while(false);
 
     return success;
