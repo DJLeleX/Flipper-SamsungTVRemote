@@ -73,7 +73,7 @@ ufbt
 An app is built for one firmware API version. If the Flipper reports an API mismatch after a firmware update, update the SDK and build again. This project was developed and tested on a Flipper Zero running Unleashed `unlshd-094` (API 88.19). For that firmware, load its SDK instead of the official one:
 
 ```bash
-ufbt update --url https://github.com/DarkFlippers/unleashed-firmware/releases/download/unlshd-094/flipper-z-f7-sdk-unlshd-094.zip
+ufbt update --url https://github.com/DarkFlippers/unleashed-firmware/releases/download/unlshd-094/flipper-z-f7-sdk-unlshd-094.zip --hw-target f7
 ```
 
 ## How the IR codes are sent
